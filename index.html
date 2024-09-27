@@ -1,111 +1,171 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super TicTacToe</title>
+    <link rel="stylesheet" href="output.css" />
+</head>
+<body>
+    <header class="header">Super Tic-Tac-Toe</header>
 
-* {
-    background-color: rgb(2, 2, 48);
-    scroll-behavior: smooth;
-}
+    <main class="container mx-auto px-4 py-2">
+        <div class="game-container lg:flex-row">
+            <div class="grid-container">
+                <div class="big-grid-game">
+                    <!-- Outer box 1 -->
+                    <div class="outer-box">
+                        <div class="small-grid-game">
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                        </div>
+                    </div>
+                    <!-- Outer box 2 -->
+                    <div class="outer-box">
+                        <div class="small-grid-game">
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                        </div>
+                    </div>
+                    <!-- Outer box 3 -->
+                    <div class="outer-box">
+                        <div class="small-grid-game">
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                        </div>
+                    </div>
+                    <!-- Outer box 4 -->
+                    <div class="outer-box">
+                        <div class="small-grid-game">
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                        </div>
+                    </div>
+                    <!-- Outer box 5 -->
+                    <div class="outer-box">
+                        <div class="small-grid-game">
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                        </div>
+                    </div>
+                    <!-- Outer box 6 -->
+                    <div class="outer-box">
+                        <div class="small-grid-game">
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                        </div>
+                    </div>
+                    <!-- Outer box 7 -->
+                    <div class="outer-box">
+                        <div class="small-grid-game">
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                        </div>
+                    </div>
+                    <!-- Outer box 8 -->
+                    <div class="outer-box">
+                        <div class="small-grid-game">
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                        </div>
+                    </div>
+                    <!-- Outer box 9 -->
+                    <div class="outer-box">
+                        <div class="small-grid-game">
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                            <div class="inner-box"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-.game-container {
-    @apply flex flex-col lg:flex-row justify-center items-center px-32;
-}
-.game-controls {
-    @apply flex flex-col justify-center items-center w-full max-w-md mx-auto mt-4; /* Added responsive width and centered */
-}
+            <div class="game-controls">
+                <div class="result-board"></div>
+                <button class="reset-button">Reset Game</button>
+                <a href="#rules-section" class="rules-link">How to Play?</a>
+            </div>
+        </div>
 
-.header {
-    @apply text-3xl sm:text-5xl md:text-6xl font-mono font-bold text-center p-3 bg-violet-950 text-white border-b-4;
-}
+        <section id="rules-section" class="rules-section">
+            <h2 class="text-2xl font-bold mb-4 text-center text-red-600 rounded-full py-2 ">How to Play</h2>
+            <h3 class="text-xl font-semibold mt-4 mb-2 rounded-full text-center">Objective</h3>
+            <p class="pl-4 py-2 rounded-sm obj">Win by claiming three three consecutive outer boxes (horizontally, vertically, or diagonally) on the large 3x3 grid. Each move inside an inner grid dictates the next grid for your opponent, adding a strategic twist to traditional Tic-Tac-Toe.</p>
+            
+            <h3 class="text-xl font-semibold mt-4 mb-2 rounded-full text-center">Rules</h3>
+            <ul class="list-disc pl-8 py-3 space-y-2 rounded-lg rule-book">
+                <li>Players take turns placing their mark (⭘ or ✘) in one of the smaller boxes within the larger grid.</li>
+                <li>The position of your play in the small grid determines which large grid square your opponent must play in next.</li>
+                <li>Win a small grid by getting three in a row within it. This claims that square in the larger grid.</li>
+                <li>If your opponent sends you to a grid that's already won or full, you can play in any open grid.</li>
+                <li>Win the game by claiming three large grid squares in a row.</li>
+                <li>The game ends in a draw if all squares are filled without a winner.</li>
+            </ul>
+        </section>
+    </main>
 
-.grid-container {
-    @apply flex justify-center items-center p-2 sm:p-4 cursor-pointer;
-}
-
-.inner-box {
-    @apply size-8 sm:size-10 md:size-12 border-2 border-white text-yellow-300 text-xl sm:text-2xl md:text-3xl font-bold flex justify-center items-center;
-}
-
-.outer-box {
-    @apply size-32 sm:size-40 md:size-48 border-2 border-white text-yellow-300 font-bold flex justify-center items-center;
-    font-size: 80px;
-    line-height: 1;
-    position: relative;
-}
-
-@screen sm {
-    .outer-box {
-        font-size: 100px;
-    }
-}
-
-@screen md {
-    .outer-box {
-        font-size: 140px;
-    }
-}
-
-.small-grid-game {
-    @apply flex flex-wrap;
-    width: 6rem;
-}
-
-@screen sm {
-    .small-grid-game {
-        width: 7.5rem;
-    }
-}
-
-@screen md {
-    .small-grid-game {
-        width: 9rem;
-    }
-}
-
-.big-grid-game {
-    @apply flex flex-wrap;
-    width: 24rem;
-}
-
-@screen sm {
-    .big-grid-game {
-        width: 30rem;
-    }
-}
-
-@screen md {
-    .big-grid-game {
-        width: 36rem;
-    }
-}
-
-.result-board {
-    @apply text-green-400 h-16 w-52 text-center sm:h-20 md:h-24 text-4xl sm:text-5xl md:text-7xl m-2 sm:m-3 md:m-4 font-mono;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.reset-button {
-    @apply text-white w-48 text-xl sm:text-2xl md:text-3xl font-mono p-2 sm:p-3 md:p-4 rounded-full shadow-sm shadow-purple-200;
-    border: 3px solid rgb(130, 130, 231);
-}
-
-
-.reset-button:active {
-    box-shadow: none;
-}
-
-.outside {
-    @apply flex flex-col justify-center items-center m-4 sm:m-8 md:m-16 lg:m-24;
-}
-
-.rules-section {
-    @apply font-mono max-w-2xl mx-auto mt-8 p-4 bg-violet-950 rounded-lg text-white;
-}
-
-.rules-link {
-    @apply text-red-600 text-center font-mono text-lg underline font-semibold hover:text-blue-100 transition-colors duration-200 mt-4 inline-block w-36;
-}
-
-/* ... (existing CSS) ... */
-
+    <script src="Game.js"></script>
+</body>
+</html>
