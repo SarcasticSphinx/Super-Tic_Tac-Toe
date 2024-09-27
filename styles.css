@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    background-color: rgb(2, 2, 48);
+    scroll-behavior: smooth;
+}
+
+.game-container {
+    @apply flex flex-col lg:flex-row justify-center items-center;
+}
+.game-controls{
+    @apply flex flex-col justify-center items-center ml-20;
+}
+
+.header {
+    @apply text-4xl sm:text-5xl md:text-6xl font-mono font-bold text-center p-3 bg-violet-950 text-white border-b-4;
+}
+
+.grid-container {
+    @apply flex justify-center items-center p-2 sm:p-4 cursor-pointer;
+}
+
+.inner-box {
+    @apply size-8 sm:size-10 md:size-12 border-2 border-white text-yellow-300 text-xl sm:text-2xl md:text-3xl font-bold flex justify-center items-center;
+}
+
+.outer-box {
+    @apply size-32 sm:size-40 md:size-48 border-2 border-white text-yellow-300 font-bold flex justify-center items-center;
+    font-size: 80px;
+    line-height: 1;
+    position: relative;
+}
+
+@screen sm {
+    .outer-box {
+        font-size: 100px;
+    }
+}
+
+@screen md {
+    .outer-box {
+        font-size: 140px;
+    }
+}
+
+.small-grid-game {
+    @apply flex flex-wrap;
+    width: 6rem;
+}
+
+@screen sm {
+    .small-grid-game {
+        width: 7.5rem;
+    }
+}
+
+@screen md {
+    .small-grid-game {
+        width: 9rem;
+    }
+}
+
+.big-grid-game {
+    @apply flex flex-wrap;
+    width: 24rem;
+}
+
+@screen sm {
+    .big-grid-game {
+        width: 30rem;
+    }
+}
+
+@screen md {
+    .big-grid-game {
+        width: 36rem;
+    }
+}
+
+.result-board {
+    @apply text-green-400 h-16 sm:h-20 md:h-24 text-4xl sm:text-5xl md:text-7xl m-2 sm:m-3 md:m-4 font-mono;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.reset-button {
+    @apply text-white text-xl sm:text-2xl md:text-3xl font-mono p-2 sm:p-3 md:p-4 rounded-full shadow-sm shadow-purple-200;
+    border: 3px solid rgb(130, 130, 231);
+}
+
+.reset-button:active {
+    box-shadow: none;
+}
+
+.outside {
+    @apply flex flex-col justify-center items-center m-4 sm:m-8 md:m-16 lg:m-24;
+}
+
+.rules-section {
+    @apply font-mono max-w-2xl mx-auto mt-8 p-4 bg-violet-950 rounded-lg text-white;
+}
+
+.rules-link {
+    @apply text-red-600 font-mono text-lg underline font-semibold hover:text-blue-100 transition-colors duration-200 mt-4 inline-block;
+}
