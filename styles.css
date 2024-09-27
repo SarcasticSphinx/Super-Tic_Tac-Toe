@@ -8,10 +8,10 @@
 }
 
 .game-container {
-    @apply flex flex-col lg:flex-row justify-center items-center;
+    @apply flex flex-col lg:flex-row justify-center items-center px-32;
 }
-.game-controls{
-    @apply flex flex-col justify-center items-center ml-20;
+.game-controls {
+    @apply flex flex-col justify-center items-center w-full max-w-md mx-auto mt-4; /* Added responsive width and centered */
 }
 
 .header {
@@ -90,6 +90,7 @@
     border: 3px solid rgb(130, 130, 231);
 }
 
+
 .reset-button:active {
     box-shadow: none;
 }
@@ -104,4 +105,79 @@
 
 .rules-link {
     @apply text-red-600 font-mono text-lg underline font-semibold hover:text-blue-100 transition-colors duration-200 mt-4 inline-block;
+}
+
+/* ... (existing CSS) ... */
+
+@media (max-width: 350px) { /* Adjust breakpoint as needed */
+    .header {
+        @apply w-screen;
+        font-size: 20px;
+    }
+
+    .game-container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center;
+    }
+
+    .game-controls {
+        margin-top: 0px; /* Add spacing between game and controls */
+        height: 200px; /* Adjust height for smaller screens */
+    }
+
+    .inner-box {
+        width: 20px;
+        height: 20px;
+        font-size: 13px; /* Reduce font size for better readability */
+    }
+
+    .outer-box {
+        width: 90px;
+        height: 90px;
+        font-size: 55px; /* Adjust font size for smaller screens */
+    }
+
+    .small-grid-game {
+        width: 3.75rem; /* Adjust width for smaller screens */
+    }
+
+    .big-grid-game {
+        width: 18rem; /* Adjust width for smaller screens */
+    }
+
+    .result-board {
+        padding: 0px;
+        margin: 0px;
+        height: 50px;
+        width: 180px;
+        font-size: 30px; /* Reduce font size for better readability */
+    }
+
+    .reset-button {
+        width: 120px;
+        padding: 2px;
+        font-size: 16px; /* Reduce font size for better readability */
+    }
+
+    .rules-link {
+        font-size: 12px;
+        width: 100px;
+    }
+
+    .rules-section {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .rule-book,
+    .obj {
+        font-size: 12px;
+    }
+
+    /* Additional adjustments for button and link alignment */
+    .reset-button,
+    .rules-link, .result-board {
+        display: block; /* Ensure elements are displayed as blocks */
+        margin: 3px 0; /* Add spacing between elements */
+        text-align: center; /* Center text within elements */
+    }
 }

@@ -700,6 +700,8 @@ video {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-left: 8rem;
+  padding-right: 8rem;
 }
 
 @media (min-width: 1024px) {
@@ -709,11 +711,16 @@ video {
 }
 
 .game-controls {
-  margin-left: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
   display: flex;
+  width: 100%;
+  max-width: 28rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* Added responsive width and centered */
 }
 
 .header {
@@ -1004,6 +1011,97 @@ video {
 .rules-link:hover {
   --tw-text-opacity: 1;
   color: rgb(219 234 254 / var(--tw-text-opacity));
+}
+
+/* ... (existing CSS) ... */
+
+@media (max-width: 350px) {
+  /* Adjust breakpoint as needed */
+
+  .header {
+    width: 100vw;
+    font-size: 20px;
+  }
+
+  .game-container {
+    flex-direction: column;
+    /* Stack elements vertically on smaller screens */
+    align-items: center;
+  }
+
+  .game-controls {
+    margin-top: 0px;
+    /* Add spacing between game and controls */
+    height: 200px;
+    /* Adjust height for smaller screens */
+  }
+
+  .inner-box {
+    width: 20px;
+    height: 20px;
+    font-size: 13px;
+    /* Reduce font size for better readability */
+  }
+
+  .outer-box {
+    width: 90px;
+    height: 90px;
+    font-size: 55px;
+    /* Adjust font size for smaller screens */
+  }
+
+  .small-grid-game {
+    width: 3.75rem;
+    /* Adjust width for smaller screens */
+  }
+
+  .big-grid-game {
+    width: 18rem;
+    /* Adjust width for smaller screens */
+  }
+
+  .result-board {
+    padding: 0px;
+    margin: 0px;
+    height: 50px;
+    width: 180px;
+    font-size: 30px;
+    /* Reduce font size for better readability */
+  }
+
+  .reset-button {
+    width: 120px;
+    padding: 2px;
+    font-size: 16px;
+    /* Reduce font size for better readability */
+  }
+
+  .rules-link {
+    font-size: 12px;
+    width: 100px;
+  }
+
+  .rules-section {
+    padding: 20px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .rule-book,
+    .obj {
+    font-size: 12px;
+  }
+
+  /* Additional adjustments for button and link alignment */
+
+  .reset-button,
+    .rules-link, .result-board {
+    display: block;
+    /* Ensure elements are displayed as blocks */
+    margin: 3px 0;
+    /* Add spacing between elements */
+    text-align: center;
+    /* Center text within elements */
+  }
 }
 
 @media (min-width: 1024px) {
