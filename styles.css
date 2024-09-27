@@ -106,3 +106,5 @@
 .rules-link {
     @apply text-red-600 text-center font-mono text-lg underline font-semibold hover:text-blue-100 transition-colors duration-200 mt-4 inline-block w-36;
 }
+
+/* ... (existing CSS) ... */
