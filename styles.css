@@ -149,19 +149,19 @@
         padding: 0px;
         margin: 0px;
         height: 50px;
-        width: 180px;
-        font-size: 30px; /* Reduce font size for better readability */
+        width: 250px;
+        font-size: 25px; /* Reduce font size for better readability */
     }
 
     .reset-button {
-        width: 120px;
+        width: 220px;
         padding: 2px;
         font-size: 16px; /* Reduce font size for better readability */
     }
 
     .rules-link {
         font-size: 12px;
-        width: 100px;
+        width: 250px;
     }
 
     .rules-section {
