@@ -109,7 +109,7 @@
 
 /* ... (existing CSS) ... */
 
-@media (max-width: 350px) { /* Adjust breakpoint as needed */
+@media (max-width: 380px) { /* Adjust breakpoint as needed */
     .header {
         @apply w-screen;
         font-size: 20px;
