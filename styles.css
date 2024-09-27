@@ -15,7 +15,7 @@
 }
 
 .header {
-    @apply text-3xl sm:text-5xl md:text-6xl font-mono font-bold text-center p-3 bg-violet-950 text-white border-b-4;
+    @apply text-4xl sm:text-5xl md:text-6xl font-mono font-bold text-center p-3 bg-violet-950 text-white border-b-4;
 }
 
 .grid-container {
@@ -80,13 +80,13 @@
 }
 
 .result-board {
-    @apply text-green-400 h-16 w-52 text-center sm:h-20 md:h-24 text-4xl sm:text-5xl md:text-7xl m-2 sm:m-3 md:m-4 font-mono;
+    @apply text-green-400 text-center h-16 w-96 sm:h-20 md:h-24 text-4xl sm:text-5xl md:text-6xl m-2 sm:m-3 md:m-4 font-mono;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
 
 .reset-button {
-    @apply text-white w-48 text-xl sm:text-2xl md:text-3xl font-mono p-2 sm:p-3 md:p-4 rounded-full shadow-sm shadow-purple-200;
+    @apply text-white w-64 text-2xl sm:text-2xl md:text-3xl font-mono p-2 sm:p-3 md:p-4 rounded-full shadow-sm shadow-purple-200;
     border: 3px solid rgb(130, 130, 231);
 }
 
@@ -106,4 +106,3 @@
 .rules-link {
     @apply text-red-600 text-center font-mono text-lg underline font-semibold hover:text-blue-100 transition-colors duration-200 mt-4 inline-block w-36;
 }
-
