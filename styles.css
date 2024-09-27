@@ -15,7 +15,7 @@
 }
 
 .header {
-    @apply text-4xl sm:text-5xl md:text-6xl font-mono font-bold text-center p-3 bg-violet-950 text-white border-b-4;
+    @apply text-3xl sm:text-5xl md:text-6xl font-mono font-bold text-center p-3 bg-violet-950 text-white border-b-4;
 }
 
 .grid-container {
@@ -80,13 +80,13 @@
 }
 
 .result-board {
-    @apply text-green-400 h-16 sm:h-20 md:h-24 text-4xl sm:text-5xl md:text-7xl m-2 sm:m-3 md:m-4 font-mono;
+    @apply text-green-400 h-16 w-52 text-center sm:h-20 md:h-24 text-4xl sm:text-5xl md:text-7xl m-2 sm:m-3 md:m-4 font-mono;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
 
 .reset-button {
-    @apply text-white text-xl sm:text-2xl md:text-3xl font-mono p-2 sm:p-3 md:p-4 rounded-full shadow-sm shadow-purple-200;
+    @apply text-white w-48 text-xl sm:text-2xl md:text-3xl font-mono p-2 sm:p-3 md:p-4 rounded-full shadow-sm shadow-purple-200;
     border: 3px solid rgb(130, 130, 231);
 }
 
@@ -104,80 +104,7 @@
 }
 
 .rules-link {
-    @apply text-red-600 font-mono text-lg underline font-semibold hover:text-blue-100 transition-colors duration-200 mt-4 inline-block;
+    @apply text-red-600 text-center font-mono text-lg underline font-semibold hover:text-blue-100 transition-colors duration-200 mt-4 inline-block w-36;
 }
 
 /* ... (existing CSS) ... */
-
-@media (max-width: 430px) { /* Adjust breakpoint as needed */
-    .header {
-        @apply w-screen;
-        font-size: 20px;
-    }
-
-    .game-container {
-        flex-direction: column; /* Stack elements vertically on smaller screens */
-        align-items: center;
-    }
-
-    .game-controls {
-        margin-top: 0px; /* Add spacing between game and controls */
-        height: 200px; /* Adjust height for smaller screens */
-    }
-
-    .inner-box {
-        width: 20px;
-        height: 20px;
-        font-size: 13px; /* Reduce font size for better readability */
-    }
-
-    .outer-box {
-        width: 90px;
-        height: 90px;
-        font-size: 55px; /* Adjust font size for smaller screens */
-    }
-
-    .small-grid-game {
-        width: 3.75rem; /* Adjust width for smaller screens */
-    }
-
-    .big-grid-game {
-        width: 18rem; /* Adjust width for smaller screens */
-    }
-
-    .result-board {
-        padding: 0px;
-        margin: 0px;
-        height: 50px;
-        width: 250px;
-        font-size: 20px; /* Reduce font size for better readability */
-    }
-
-    .reset-button {
-        width: 220px;
-        padding: 2px;
-        font-size: 16px; /* Reduce font size for better readability */
-    }
-
-    .rules-link {
-        font-size: 12px;
-        width: 250px;
-    }
-
-    .rules-section {
-        padding: 20px; /* Adjust padding for smaller screens */
-    }
-
-    .rule-book,
-    .obj {
-        font-size: 12px;
-    }
-
-    /* Additional adjustments for button and link alignment */
-    .reset-button,
-    .rules-link, .result-board {
-        display: block; /* Ensure elements are displayed as blocks */
-        margin: 3px 0; /* Add spacing between elements */
-        text-align: center; /* Center text within elements */
-    }
-}
