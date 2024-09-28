@@ -10,12 +10,13 @@
 .game-container {
     @apply flex flex-col lg:flex-row justify-center items-center px-32;
 }
+
 .game-controls {
-    @apply flex flex-col justify-center items-center w-full max-w-md mx-auto mt-4; /* Added responsive width and centered */
+    @apply flex flex-col justify-center items-center w-full max-w-md mx-auto mt-4;
 }
 
 .header {
-    @apply text-4xl sm:text-5xl md:text-6xl font-mono font-bold text-center p-3 bg-violet-950 text-white border-b-4;
+    @apply text-2xl sm:text-5xl md:text-6xl font-mono font-bold text-center p-3 bg-violet-950 text-white border-b-4;
 }
 
 .grid-container {
@@ -23,12 +24,12 @@
 }
 
 .inner-box {
-    @apply size-8 sm:size-10 md:size-12 border-2 border-white text-yellow-300 text-xl sm:text-2xl md:text-3xl font-bold flex justify-center items-center;
+    @apply size-7 sm:size-10 md:size-12 border-2 border-white text-yellow-300 text-lg sm:text-2xl md:text-3xl font-bold flex justify-center items-center;
 }
 
 .outer-box {
-    @apply size-32 sm:size-40 md:size-48 border-2 border-white text-yellow-300 font-bold flex justify-center items-center;
-    font-size: 80px;
+    @apply size-28 sm:size-40 md:size-48 border-2 border-white text-yellow-300 font-bold flex justify-center items-center;
+    font-size: 76px;
     line-height: 1;
     position: relative;
 }
@@ -47,7 +48,7 @@
 
 .small-grid-game {
     @apply flex flex-wrap;
-    width: 6rem;
+    width: 5.25rem;
 }
 
 @screen sm {
@@ -64,7 +65,7 @@
 
 .big-grid-game {
     @apply flex flex-wrap;
-    width: 24rem;
+    width: 21rem;
 }
 
 @screen sm {
@@ -86,10 +87,9 @@
 }
 
 .reset-button {
-    @apply text-white w-64 text-2xl sm:text-2xl md:text-3xl font-mono p-2 sm:p-3 md:p-4 rounded-full shadow-sm shadow-purple-200;
+    @apply text-white w-64 text-xl sm:text-2xl md:text-3xl font-mono p-2 sm:p-3 md:p-4 rounded-full shadow-sm shadow-purple-200;
     border: 3px solid rgb(130, 130, 231);
 }
-
 
 .reset-button:active {
     box-shadow: none;
@@ -106,5 +106,3 @@
 .rules-link {
     @apply text-red-600 text-center font-mono text-lg underline font-semibold hover:text-blue-100 transition-colors duration-200 mt-4 inline-block w-36;
 }
-
-/* ... (existing CSS) ... */
