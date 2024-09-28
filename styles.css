@@ -7,8 +7,51 @@
     scroll-behavior: smooth;
 }
 
+/* Mobile styles (screens smaller than 640px) */
+@media (max-width: 639px) {
+    body {
+        max-width: 360px;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+
+    .game-container {
+        @apply px-2;
+        max-width: 360px;
+    }
+
+    .inner-box {
+        @apply size-6 text-base;
+    }
+
+    .outer-box {
+        @apply size-24;
+        font-size: 64px;
+    }
+
+    .small-grid-game {
+        width: 4.5rem;
+    }
+
+    .big-grid-game {
+        width: 18rem;
+    }
+
+    .reset-button {
+        @apply text-lg w-48;
+    }
+
+    .header {
+        @apply text-xl;
+    }
+
+    .result-board {
+        @apply text-2xl w-full;
+    }
+}
+
 .game-container {
-    @apply flex flex-col lg:flex-row justify-center items-center px-32;
+    @apply flex flex-col lg:flex-row justify-center items-center px-4 sm:px-32;
 }
 
 .game-controls {
@@ -24,20 +67,14 @@
 }
 
 .inner-box {
-    @apply size-7 sm:size-10 md:size-12 border-2 border-white text-yellow-300 text-lg sm:text-2xl md:text-3xl font-bold flex justify-center items-center;
+    @apply size-10 md:size-12 border-2 border-white text-yellow-300 text-2xl md:text-3xl font-bold flex justify-center items-center;
 }
 
 .outer-box {
-    @apply size-28 sm:size-40 md:size-48 border-2 border-white text-yellow-300 font-bold flex justify-center items-center;
-    font-size: 76px;
+    @apply size-40 md:size-48 border-2 border-white text-yellow-300 font-bold flex justify-center items-center;
+    font-size: 100px;
     line-height: 1;
     position: relative;
-}
-
-@screen sm {
-    .outer-box {
-        font-size: 100px;
-    }
 }
 
 @screen md {
@@ -48,13 +85,7 @@
 
 .small-grid-game {
     @apply flex flex-wrap;
-    width: 5.25rem;
-}
-
-@screen sm {
-    .small-grid-game {
-        width: 7.5rem;
-    }
+    width: 7.5rem;
 }
 
 @screen md {
@@ -65,13 +96,7 @@
 
 .big-grid-game {
     @apply flex flex-wrap;
-    width: 21rem;
-}
-
-@screen sm {
-    .big-grid-game {
-        width: 30rem;
-    }
+    width: 30rem;
 }
 
 @screen md {
@@ -81,13 +106,13 @@
 }
 
 .result-board {
-    @apply text-green-400 text-center h-16 w-96 sm:h-20 md:h-24 text-4xl sm:text-5xl md:text-6xl m-2 sm:m-3 md:m-4 font-mono;
+    @apply text-green-400 text-center h-16 sm:h-20 md:h-24 text-4xl sm:text-5xl md:text-6xl m-2 sm:m-3 md:m-4 font-mono;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
 
 .reset-button {
-    @apply text-white w-64 text-xl sm:text-2xl md:text-3xl font-mono p-2 sm:p-3 md:p-4 rounded-full shadow-sm shadow-purple-200;
+    @apply text-white w-64 text-2xl md:text-3xl font-mono p-2 sm:p-3 md:p-4 rounded-full shadow-sm shadow-purple-200;
     border: 3px solid rgb(130, 130, 231);
 }
 

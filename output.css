@@ -695,13 +695,74 @@ video {
   scroll-behavior: smooth;
 }
 
+/* Mobile styles (screens smaller than 640px) */
+
+@media (max-width: 639px) {
+  body {
+    max-width: 360px;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  .game-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 360px;
+  }
+
+  .inner-box {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .outer-box {
+    width: 6rem;
+    height: 6rem;
+    font-size: 64px;
+  }
+
+  .small-grid-game {
+    width: 4.5rem;
+  }
+
+  .big-grid-game {
+    width: 18rem;
+  }
+
+  .reset-button {
+    width: 12rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .header {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .result-board {
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
 .game-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-left: 8rem;
-  padding-right: 8rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .game-container {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -766,27 +827,18 @@ video {
 
 .inner-box {
   display: flex;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
   align-items: center;
   justify-content: center;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(253 224 71 / var(--tw-text-opacity));
-}
-
-@media (min-width: 640px) {
-  .inner-box {
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -800,8 +852,8 @@ video {
 
 .outer-box {
   display: flex;
-  width: 7rem;
-  height: 7rem;
+  width: 10rem;
+  height: 10rem;
   align-items: center;
   justify-content: center;
   border-width: 2px;
@@ -812,13 +864,6 @@ video {
   color: rgb(253 224 71 / var(--tw-text-opacity));
 }
 
-@media (min-width: 640px) {
-  .outer-box {
-    width: 10rem;
-    height: 10rem;
-  }
-}
-
 @media (min-width: 768px) {
   .outer-box {
     width: 12rem;
@@ -827,15 +872,9 @@ video {
 }
 
 .outer-box {
-  font-size: 76px;
+  font-size: 100px;
   line-height: 1;
   position: relative;
-}
-
-@media (min-width: 640px) {
-  .outer-box {
-    font-size: 100px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -847,13 +886,7 @@ video {
 .small-grid-game {
   display: flex;
   flex-wrap: wrap;
-  width: 5.25rem;
-}
-
-@media (min-width: 640px) {
-  .small-grid-game {
-    width: 7.5rem;
-  }
+  width: 7.5rem;
 }
 
 @media (min-width: 768px) {
@@ -865,13 +898,7 @@ video {
 .big-grid-game {
   display: flex;
   flex-wrap: wrap;
-  width: 21rem;
-}
-
-@media (min-width: 640px) {
-  .big-grid-game {
-    width: 30rem;
-  }
+  width: 30rem;
 }
 
 @media (min-width: 768px) {
@@ -883,7 +910,6 @@ video {
 .result-board {
   margin: 0.5rem;
   height: 4rem;
-  width: 24rem;
   text-align: center;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 2.25rem;
@@ -920,8 +946,8 @@ video {
   border-radius: 9999px;
   padding: 0.5rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -934,8 +960,6 @@ video {
 @media (min-width: 640px) {
   .reset-button {
     padding: 0.75rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 }
 
