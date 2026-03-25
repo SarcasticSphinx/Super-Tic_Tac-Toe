@@ -1,0 +1,31 @@
+super_tic_tac_toe_flutter/build/
+super_tic_tac_toe_flutter/.dart_tool/
+super_tic_tac_toe_flutter/.idea/
+super_tic_tac_toe_flutter/ios/Pods/
+super_tic_tac_toe_flutter/ios/.symlinks/
+super_tic_tac_toe_flutter/macos/Pods/
+super_tic_tac_toe_flutter/macos/Flutter/ephemeral/
+super_tic_tac_toe_flutter/.flutter-plugins
+super_tic_tac_toe_flutter/.flutter-plugins-dependencies
+
+# Flutter/Dart/Pub
+**/build/
+**/.dart_tool/
+**/.idea/
+**/.pub-cache/
+**/.pub/
+**/build/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+
+# Android
+**/android/.gradle/
+**/android/app/build/
+
+# iOS
+**/ios/Pods/
+**/ios/.symlinks/
+
+# macOS
+**/macos/Pods/
+**/macos/Flutter/ephemeral/
